@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Tinkii ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-decor">♡</div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <button onclick="showPage(1)">Cover</button>
+        <button onclick="showPage(2)">Birthday</button>
+        <button onclick="showPage(3)">Memories</button>
+        <button onclick="showPage(4)">Letter</button>
+    </nav>
+
+    <!-- PAGE 1: COVER -->
+    <section class="page active" id="page1">
+
+        <div class="cover">
+
+            <div class="cover-bow">🎀</div>
+
+            <p class="small-text">A LITTLE SOMETHING FOR</p>
+
+            <h1>for my tinkii</h1>
+
+            <p class="cover-subtitle">
+                a collection of memories, photographs & little things
+            </p>
+
+           <div class="cover-photo">
+    <img id="coverPreview" src="" alt="Your photo">
+
+    <label for="coverUpload" class="upload-label" id="uploadLabel">
+        + Add your photo
+    </label>
+
+    <input type="file" id="coverUpload" accept="image/*">
+
+    <div class="photo-actions" id="photoActions">
+        <label for="coverUpload">Change Photo</label>
+        <button type="button" onclick="removeCoverPhoto()">
+            Remove Photo
+        </button>
+    </div>
+</div>
+
+    </section>
+
+
+    <!-- PAGE 2: BIRTHDAY CAKE -->
+    <section class="page" id="page2">
+
+        <div class="birthday-container">
+
+            <p class="small-text">TODAY IS ALL ABOUT YOU</p>
+
+            <h1>Happy Birthday!</h1>
+
+            <p class="birthday-subtitle">
+                Make a little wish ♡
+            </p>
+
+            <div class="cake-scene">
+
+                <div class="candles">
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                </div>
+
+                <div class="cake-top"></div>
+                <div class="cake-middle"></div>
+                <div class="cake-bottom"></div>
+
+            </div>
+
+            <h2 id="countdown">Ready?</h2>
+
+            <button class="main-button" id="countdownButton"
+                onclick="startCountdown()">
+                Start the countdown ♡
+            </button>
+
+            <p id="wishMessage" class="wish-message"></p>
+
+            <button class="next-button" onclick="showPage(3)">
+                Turn the page →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 3: MEMORIES -->
+    <section class="page" id="page3">
+
+        <div class="memories-container">
+
+            <p class="small-text">A FEW LITTLE MOMENTS</p>
+
+            <h1>Our Memories</h1>
+
+            <p class="memory-subtitle">
+                Some moments deserve their own little space.
+            </p>
+
+            <label for="memoryUpload" class="upload-memory">
+                + Add photographs
+            </label>
+
+            <input type="file" id="memoryUpload"
+                accept="image/*" multiple>
+
+            <div class="memory-gallery" id="memoryGallery">
+
+            </div>
+
+            <button class="next-button" onclick="showPage(4)">
+                One last page →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 4: PERSONAL LETTER -->
+    <section class="page" id="page4">
+
+        <div class="letter-container">
+
+            <p class="small-text">SOMETHING FROM ME TO YOU</p>
+
+            <div class="letter-paper">
+
+                <div class="letter-decoration">♡</div>
+
+                <h1>A Letter For You</h1>
+
+                <p class="letter-date">A little note on your birthday</p>
+
+                <textarea
+                    id="birthdayLetter"
+                    placeholder="Dear bestie,
+
+Start writing your letter here...
+
+Take your time. This space is yours. ♡"
+                    spellcheck="true"
+                ></textarea>
+
+                <p class="saved-message" id="savedMessage">
+                    Your letter will be saved automatically ♡
+                </p>
+
+            </div>
+
+            <button class="next-button" onclick="showPage(1)">
+                Back to the cover ↺
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
