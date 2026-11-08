@@ -1,26 +1,46 @@
 // PAGE NAVIGATION
 
-function showPage(pageName) {
+let currentPage = 1;
 
-    const pages = document.querySelectorAll(".page");
+const totalPages = 4;
 
-    pages.forEach(function(page) {
+function showPage(pageNumber) {
+
+    if (pageNumber < 1 || pageNumber > totalPages) {
+        return;
+    }
+
+    document.querySelectorAll(".page").forEach(function(page) {
         page.classList.remove("active");
     });
 
-    const selectedPage = document.getElementById(pageName);
+    document.getElementById("page" + pageNumber)
+        .classList.add("active");
 
-    if (selectedPage) {
-        selectedPage.classList.add("active");
-    }
+    currentPage = pageNumber;
 
-    // Start birthday countdown
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
-    if (pageName === "birthday") {
+    if (pageNumber === 2) {
         startBirthday();
     }
+}
 
-    window.scrollTo(0, 0);
+
+// NEXT PAGE
+
+function nextPage() {
+    showPage(currentPage + 1);
+}
+
+
+// PREVIOUS PAGE
+
+function previousPage() {
+    showPage(currentPage - 1);
 }
 
 
@@ -30,7 +50,9 @@ let birthdayStarted = false;
 
 function startBirthday() {
 
-    if (birthdayStarted) return;
+    if (birthdayStarted) {
+        return;
+    }
 
     birthdayStarted = true;
 
