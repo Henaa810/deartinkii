@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>For My Tinkii ♡</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Dancing+Script:wght@500;600;700&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,115 +17,168 @@
     <main class="book">
 
         <!-- PAGE 1: COVER -->
-        <section class="page cover-page" id="page1">
+
+        <section class="page cover-page active" id="page1">
 
             <div class="cover">
-                <img src="tinkii.jpj.jpeg" alt="Tinkii" class="cover-photo">
+
+                <div class="bow">🎀</div>
+
+                <img src="tinkii.jpj.jpeg"
+                     alt="Tinkii"
+                     class="cover-photo">
 
                 <h1>for my tinkii ♡</h1>
+
                 <p>a little birthday journal</p>
 
-                <button onclick="nextPage()">Open your journal ♡</button>
+                <button onclick="nextPage()">
+                    Open your journal ♡
+                </button>
+
             </div>
 
         </section>
 
 
-        <!-- PAGE 2: BIRTHDAY CAKE -->
+        <!-- PAGE 2: CAKE -->
+
         <section class="page cake-page" id="page2">
 
-            <h2>Make a little wish ♡</h2>
+            <div class="page-content">
 
-            <div class="cake-container">
+                <h2>Make a little wish ♡</h2>
 
-                <div class="candles">
-                    <div class="candle">
-                        <div class="flame" id="flame1"></div>
+                <p class="birthday-text">
+                    A little cake, just for you.
+                </p>
+
+                <div class="cake-container">
+
+                    <div class="candles">
+
+                        <div class="candle">
+                            <div class="flame" id="flame1"></div>
+                        </div>
+
+                        <div class="candle">
+                            <div class="flame" id="flame2"></div>
+                        </div>
+
+                        <div class="candle">
+                            <div class="flame" id="flame3"></div>
+                        </div>
+
                     </div>
 
-                    <div class="candle">
-                        <div class="flame" id="flame2"></div>
+                    <div class="cake">
+
+                        <div class="cake-top"></div>
+
+                        <div class="cake-middle"></div>
+
+                        <div class="cake-bottom"></div>
+
                     </div>
 
-                    <div class="candle">
-                        <div class="flame" id="flame3"></div>
-                    </div>
                 </div>
 
-                <div class="cake">
-                    <div class="cake-top"></div>
-                    <div class="cake-middle"></div>
-                    <div class="cake-bottom"></div>
-                </div>
+                <p id="countdown" class="countdown">
+                    Get ready...
+                </p>
+
+                <p id="wishMessage" class="wish-message"></p>
+
+                <button onclick="nextPage()">
+                    Next page ♡
+                </button>
 
             </div>
-
-            <p id="cake-message">Your birthday wish is waiting...</p>
-
-            <button onclick="nextPage()">Next page ♡</button>
 
         </section>
 
 
         <!-- PAGE 3: MEMORIES -->
+
         <section class="page memories-page" id="page3">
 
-            <h2>Little pieces of us ♡</h2>
-            <p>Some memories worth keeping.</p>
+            <div class="page-content">
 
-            <div class="memory-gallery">
+                <h2>Little pieces of us ♡</h2>
 
-                <div class="polaroid">
-                    <img src="memory1.jpeg.jpeg" alt="Memory 1">
+                <p class="memory-subtitle">
+                    Some memories worth keeping.
+                </p>
+
+                <div class="memory-gallery">
+
+                    <div class="polaroid photo-one">
+                        <img src="memory1.jpeg.jpeg" alt="Memory 1">
+                    </div>
+
+                    <div class="polaroid photo-two">
+                        <img src="memory2.jpeg.jpeg" alt="Memory 2">
+                    </div>
+
+                    <div class="polaroid photo-three">
+                        <img src="memory3.jpeg.jpeg" alt="Memory 3">
+                    </div>
+
+                    <div class="polaroid photo-four">
+                        <img src="memory4.jpeg.jpeg" alt="Memory 4">
+                    </div>
+
+                    <div class="polaroid photo-five">
+                        <img src="memory5.jpeg.jpeg" alt="Memory 5">
+                    </div>
+
                 </div>
 
-                <div class="polaroid">
-                    <img src="memory2.jpeg.jpeg" alt="Memory 2">
-                </div>
-
-                <div class="polaroid">
-                    <img src="memory3.jpeg.jpeg" alt="Memory 3">
-                </div>
-
-                <div class="polaroid">
-                    <img src="memory4.jpeg.jpeg" alt="Memory 4">
-                </div>
-
-                <div class="polaroid">
-                    <img src="memory5.jpeg.jpeg" alt="Memory 5">
-                </div>
+                <button onclick="nextPage()">
+                    One last thing ♡
+                </button>
 
             </div>
-
-            <button onclick="nextPage()">One last thing ♡</button>
 
         </section>
 
 
         <!-- PAGE 4: LETTER -->
+
         <section class="page letter-page" id="page4">
 
-            <h2>A little letter for you ♡</h2>
+            <div class="page-content">
 
-            <div class="letter">
-                <p>Dear Tinkii,</p>
+                <h2>A little letter for you ♡</h2>
 
-                <p>
-                    Happy birthday! Sixteen years of memories, laughter,
-                    random conversations and so many moments together.
-                    I'm so glad I got to grow up with you.
-                </p>
+                <div class="letter">
 
-                <p>
-                    I hope this year brings you everything you've been
-                    wishing for and so many reasons to smile.
-                </p>
+                    <p>Dear Tinkii,</p>
 
-                <p>With love,</p>
-                <p>Your favourite person ♡</p>
+                    <p>
+                        Happy birthday! Sixteen years of memories,
+                        laughter, random conversations and so many
+                        moments together. I'm so glad I got to
+                        grow up with you.
+                    </p>
+
+                    <p>
+                        I hope this year brings you everything
+                        you've been wishing for and so many
+                        reasons to smile.
+                    </p>
+
+                    <p>With love,</p>
+
+                    <p>Your favourite person ♡</p>
+
+                </div>
+
+                <button onclick="previousPage()">
+                    Go back ♡
+                </button>
+
             </div>
-
-            <button onclick="previousPage()">Go back ♡</button>
 
         </section>
 
