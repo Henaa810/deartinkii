@@ -1,73 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>For My Tinkii ♡</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <div class="background-decor">♡</div>
-
-    <!-- NAVIGATION -->
-    <nav>
-        <button onclick="showPage(1)">Cover</button>
-        <button onclick="showPage(2)">Birthday</button>
-        <button onclick="showPage(3)">Memories</button>
-        <button onclick="showPage(4)">Letter</button>
-    </nav>
+<main class="journal">
 
     <!-- PAGE 1: COVER -->
-    <section class="page active" id="page1">
 
-        <div class="cover">
+    <section class="page active" id="cover">
 
-            <div class="cover-bow">🎀</div>
+        <div class="cover-content">
 
-            <p class="small-text">A LITTLE SOMETHING FOR</p>
+            <p class="small-heading">A LITTLE SOMETHING FOR YOU</p>
 
-            <h1>for my tinkii</h1>
+            <div class="bow">🎀</div>
 
-            <p class="cover-subtitle">
-                a collection of memories, photographs & little things
+            <h1>
+                for my<br>
+                <span>tinkii</span>
+            </h1>
+
+            <div class="cover-photo">
+
+                <img src="images/tinkii.jpj.jpeg" alt="Tinkii">
+
+            </div>
+
+            <p class="cover-caption">
+                a little journal made just for you ♡
             </p>
 
-           <div class="cover-photo">
-    <img id="coverPreview" src="" alt="Your photo">
+            <p class="date">MADE WITH LOVE</p>
 
-    <label for="coverUpload" class="upload-label" id="uploadLabel">
-        + Add your photo
-    </label>
+            <button class="next-button" onclick="showPage('birthday')">
+                Open your journal ♡
+            </button>
 
-    <input type="file" id="coverUpload" accept="image/*">
-
-    <div class="photo-actions" id="photoActions">
-        <label for="coverUpload">Change Photo</label>
-        <button type="button" onclick="removeCoverPhoto()">
-            Remove Photo
-        </button>
-    </div>
-</div>
+        </div>
 
     </section>
 
 
-    <!-- PAGE 2: BIRTHDAY CAKE -->
-    <section class="page" id="page2">
+    <!-- PAGE 2: BIRTHDAY -->
 
-        <div class="birthday-container">
+    <section class="page" id="birthday">
 
-            <p class="small-text">TODAY IS ALL ABOUT YOU</p>
+        <div class="page-content">
 
-            <h1>Happy Birthday!</h1>
+            <p class="small-heading">TODAY IS ALL ABOUT YOU</p>
 
-            <p class="birthday-subtitle">
-                Make a little wish ♡
-            </p>
+            <h2>Happy Birthday!</h2>
 
-            <div class="cake-scene">
+            <p class="birthday-text">Make a wish, Tinkii ♡</p>
+
+            <div class="cake-area">
 
                 <div class="candles">
 
@@ -86,22 +84,29 @@
                 </div>
 
                 <div class="cake-top"></div>
-                <div class="cake-middle"></div>
-                <div class="cake-bottom"></div>
+
+                <div class="cake-body">
+
+                    <div class="icing"></div>
+
+                    <div class="strawberry">🍓</div>
+
+                    <div class="strawberry second">🍓</div>
+
+                </div>
+
+                <div class="cake-plate"></div>
 
             </div>
 
-            <h2 id="countdown">Ready?</h2>
+            <p class="countdown" id="countdown">
+                Get ready to make a wish...
+            </p>
 
-            <button class="main-button" id="countdownButton"
-                onclick="startCountdown()">
-                Start the countdown ♡
-            </button>
+            <p class="wish-message" id="wishMessage"></p>
 
-            <p id="wishMessage" class="wish-message"></p>
-
-            <button class="next-button" onclick="showPage(3)">
-                Turn the page →
+            <button class="next-button" onclick="showPage('memories')">
+                Next page ♡
             </button>
 
         </div>
@@ -110,31 +115,45 @@
 
 
     <!-- PAGE 3: MEMORIES -->
-    <section class="page" id="page3">
 
-        <div class="memories-container">
+    <section class="page" id="memories">
 
-            <p class="small-text">A FEW LITTLE MOMENTS</p>
+        <div class="page-content">
 
-            <h1>Our Memories</h1>
+            <p class="small-heading">LITTLE MOMENTS</p>
+
+            <h2>Our memories</h2>
 
             <p class="memory-subtitle">
-                Some moments deserve their own little space.
+                A little collection of us ♡
             </p>
 
-            <label for="memoryUpload" class="upload-memory">
-                + Add photographs
-            </label>
+            <div class="memory-grid">
 
-            <input type="file" id="memoryUpload"
-                accept="image/*" multiple>
+                <div class="polaroid photo-one">
+                    <img src="images/memory1.jpeg.jpeg" alt="Memory 1">
+                </div>
 
-            <div class="memory-gallery" id="memoryGallery">
+                <div class="polaroid photo-two">
+                    <img src="images/memory2.jpeg.jpeg" alt="Memory 2">
+                </div>
+
+                <div class="polaroid photo-three">
+                    <img src="images/memory3.jpeg.jpeg" alt="Memory 3">
+                </div>
+
+                <div class="polaroid photo-four">
+                    <img src="images/memory4.jpeg.jpeg" alt="Memory 4">
+                </div>
+
+                <div class="polaroid photo-five">
+                    <img src="images/memory5.jpeg.jpeg" alt="Memory 5">
+                </div>
 
             </div>
 
-            <button class="next-button" onclick="showPage(4)">
-                One last page →
+            <button class="next-button" onclick="showPage('letter')">
+                One last thing ♡
             </button>
 
         </div>
@@ -142,47 +161,97 @@
     </section>
 
 
-    <!-- PAGE 4: PERSONAL LETTER -->
-    <section class="page" id="page4">
+    <!-- PAGE 4: LETTER -->
 
-        <div class="letter-container">
+    <section class="page" id="letter">
 
-            <p class="small-text">SOMETHING FROM ME TO YOU</p>
+        <div class="page-content letter-content">
+
+            <p class="small-heading">A LETTER FOR YOU</p>
+
+            <h2>Dear Tinkss,</h2>
 
             <div class="letter-paper">
 
-                <div class="letter-decoration">♡</div>
+                <div class="letter-text" id="letterText">
 
-                <h1>A Letter For You</h1>
+                    <p>HAPPY HAPPYYYY BIRTHDAYYYYYYY.....</p>
 
-                <p class="letter-date">A little note on your birthday</p>
+                    <p>
+                        What should I write?? I don't really know.
+                    </p>
 
-                <textarea
-                    id="birthdayLetter"
-                    placeholder="Dear bestie,
+                    <p>
+                        I wanted to gift you something really nice,
+                        but since we're too far apart, I couldn't
+                        come up with something. I hope this website
+                        puts a little smile on your face.
+                    </p>
 
-Start writing your letter here...
+                    <p>
+                        I want you to know that you're that special
+                        friend of mine. Even while building this,
+                        I was flexing to all my other friends,
+                        telling them that I know you since my
+                        Montessori and that we've been friends
+                        ever since.
+                    </p>
 
-Take your time. This space is yours. ♡"
-                    spellcheck="true"
-                ></textarea>
+                    <p>
+                        I've known you since then, and we've spent
+                        so many years together. But honestly,
+                        I would always imagine what it would be
+                        like to have you around during my uni days.
+                    </p>
 
-                <p class="saved-message" id="savedMessage">
-                    Your letter will be saved automatically ♡
-                </p>
+                    <p>
+                        We would definitely gossip, have lots and
+                        lots of food, and do all the fun things
+                        we used to do as kids.
+                    </p>
+
+                    <p>
+                        I really miss you, Hinaa.
+                    </p>
+
+                    <p>
+                        I want you to be happy and never feel any
+                        less of yourself. You've worked so hard
+                        to reach NIFT. I know it's giving you a
+                        lot of stress, but remember that you
+                        worked for it. There are so many people
+                        who still dream of getting into colleges
+                        like yours.
+                    </p>
+
+                    <p>
+                        May all the good things find their way
+                        to you.
+                    </p>
+
+                    <p>
+                        I love youu &lt;3
+                    </p>
+
+                </div>
 
             </div>
 
-            <button class="next-button" onclick="showPage(1)">
-                Back to the cover ↺
+            <p class="letter-footer">
+                with lots of love, always ♡
+            </p>
+
+            <button class="next-button" onclick="showPage('cover')">
+                Back to the beginning ♡
             </button>
 
         </div>
 
     </section>
 
+</main>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
